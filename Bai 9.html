@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noi mang</title>
+</head>
+<body>
+    <input type="number" id="Input">
+    <input type="button" value="Add A" onclick="AddA()">
+    <input type="button" value="Add B" onclick="AddB()">
+    <h3>Mang A</h3>
+    <p id="mangA"></p>
+    <h3>Mang B</h3>
+    <p id="mangB"></p>
+    <input type="button" value="Ghep" onclick="Ghep()">
+    <hr/>
+    <h3>Mang C</h3>
+    <p id="mangC"></p>
+<script>
+    let arrA=[];
+    let arrB=[];
+    let arrC=[];
+    function AddA() {
+        let num = document.getElementById('Input').value;
+        arrA.push(num);
+        document.getElementById('mangA').innerHTML = arrA.toString();
+        document.getElementById('Input').value = '';
+    }
+    function AddB() {
+        let num = document.getElementById('Input').value;
+        arrB.push(num);
+        document.getElementById('mangB').innerHTML = arrB.toString();
+        document.getElementById('Input').value = '';
+    }
+    function Ghep() {
+        arrC=arrA;
+        for (i=0;i<arrB.length;i++){
+            arrC.push(arrB[i]);
+        }
+        document.getElementById('mangC').innerHTML=arrC.toString();
+    }
+</script>
+</body>
+</html>

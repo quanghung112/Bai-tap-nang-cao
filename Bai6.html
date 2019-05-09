@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="Input">
+<input type="button" value="add" onclick="Add()"><br><br>
+<input type="number" id="number">
+<input type="button" value="Kiemtra" onclick="Ktr()">
+<hr/>
+<h3>Mang gom</h3>
+<p id="mang"></p>
+<hr/>
+<h3>Ket qua</h3>
+<p id="result"></p>
+<script>
+    let arr = [];
+
+    function Add() {
+        let num = document.getElementById('Input').value;
+        arr.push(num);
+        document.getElementById('mang').innerHTML = arr.toString();
+        document.getElementById('Input').value = '';
+    }
+
+    function Ktr() {
+        let num = document.getElementById('number').value;
+        let ktra = true;
+        for (i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
+                document.getElementById('result').innerHTML = num + " is in the array";
+            } else {
+                ktra = true;
+            }
+        }
+        if (ktra) {
+            document.getElementById('result').innerHTML = num + " is not in the array";
+        }
+        document.getElementById('number').value = '';
+    }
+</script>
+</body>
+</html>

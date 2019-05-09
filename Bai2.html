@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim max trong chuoi</title>
+</head>
+<body>
+<h3>Mang gom</h3>
+<p id="mang"></p>
+<br>
+<hr/>
+<h3>Phan tu lon nhat</h3>
+<p id="result"></p>
+<script>
+    let arr = ['10', '100', '125', '206', '350', '12', '10', '800', '23', '85', '136', '2', '3', '4','-5'];
+    let str = arr.toString();
+    document.getElementById('mang').innerHTML = str;
+    let max = parseInt(arr[0]);
+    for (i = 0; i < arr.length; i++) {
+        if (parseInt(arr[i]) > max) {
+            max = parseInt(arr[i]);
+        }
+    }
+    document.getElementById('result').innerHTML=max;
+</script>
+</body>
+</html>

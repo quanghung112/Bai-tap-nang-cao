@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so nguyen lon hon 10</title>
+</head>
+<body>
+    <h3>Mang gom</h3>
+    <p id="mang"></p>
+    <br>
+    <hr/>
+    <h3>Cac so lon hon 10</h3>
+    <p id="result"></p>
+    <script>
+        let arr=[10,100,25,26,35,12,1,8,23,85,136,2,3,4,-5];
+        let A=[];
+        let str=arr.toString();
+        document.getElementById('mang').innerHTML=str;
+        for (i=0;i<arr.length;i++){
+            if (arr[i]>10){
+                A.push(arr[i]);
+            }
+        }
+        let Anew=A.sort(function (a,b) {
+            return a-b;
+        })
+        let str10=Anew.toString();
+        document.getElementById('result').innerHTML=str10;
+    </script>
+</body>
+</html>
